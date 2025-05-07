@@ -1,7 +1,11 @@
 import { Day, PrismaClient, UserSex } from "@prisma/client";
+import bcrypt from "bcrypt";
+
 const prisma = new PrismaClient();
 
 async function main() {
+  const hashedPassword = await bcrypt.hash("securepassword123", 10);
+
   // ADMIN
   await prisma.admin.create({
     data: {
@@ -59,6 +63,7 @@ async function main() {
     await prisma.teacher.create({
       data: {
         id: `teacher${i}`, // Unique ID for the teacher
+        password: hashedPassword, // Add a valid password here
         username: `teacher${i}`,
         name: `TName${i}`,
         surname: `TSurname${i}`,
@@ -73,6 +78,45 @@ async function main() {
       },
     });
   }
+
+  await prisma.teacher.create({
+    data: {
+      id: "teacherId",
+      password: "securepassword123",
+      username: "teacher1",
+      name: "John",
+      surname: "Doe",
+      address: "123 Main St",
+      bloodType: "O+",
+      sex: UserSex.MALE,
+      birthday: new Date(new Date().setFullYear(new Date().getFullYear() - 35)),
+      subjects: {
+        connect: [{ id: 1 }], // Connect to an existing subject
+      },
+    },
+  });
+
+  const teacher = await prisma.teacher.findUnique({
+    where: { id: "existingTeacherId" }, // Replace with the actual ID
+  });
+
+  if (!teacher) {
+    console.error("Teacher not found");
+    return;
+  }
+
+  await prisma.teacher.update({
+    where: { id: "existingTeacherId" }, // Replace with the correct ID
+    data: {
+      subjects: {
+        disconnect: [{ id: 1 }], // Replace with a valid numeric subject ID
+      },
+    },
+  });
+
+  // console.log("Teacher ID:", id); // Removed as 'id' is undefined
+
+  // console.log("Subject ID:", subjectId); // Removed as 'subjectId' is undefined
 
   // LESSON
   for (let i = 1; i <= 30; i++) {

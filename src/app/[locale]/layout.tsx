@@ -1,17 +1,18 @@
-import "./globals.css";
-//import Script from "next/script";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Metadata } from "next";
+import Footer from "@//components/layout/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Raleway, Architects_Daughter, Bowlby_One_SC } from "next/font/google";
+import { Navbar } from "@/components/layout/Navbar/navbar";
 import { NextIntlClientProvider } from "next-intl";
-import { locale } from "moment";
-
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://clerk-next-app.vercel.app/"),
-  title: "8zense.com",
+  title: "",
   description:
     "A simple and powerful Next.js template featuring authentication and user management powered by Clerk.",
-  openGraph: { images: ["/LogoEZ990.svg"] },
+  openGraph: { images: ["/LogoDms.png"] },
 };
 
 
@@ -44,19 +45,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    
-
-    <html lang="de" className={` ${bowlbySC.variable} ${raleway.variable} ${architectsDaughter.variable}`}>
-      <body className={` antialiased`}>
-       
+    <NextIntlClientProvider>
+    <ClerkProvider>
+    <html lang="en" className={` ${bowlbySC.variable} ${raleway.variable} ${architectsDaughter.variable}`}>
+      <body className={`min-h-screen flex flex-col antialiased`}>
+     <Header/>
+     <Navbar/>
+       <main className=" overflow-x-hidden ">
           {children}
-          
-          
+          </main>
+          <Footer/>
+          <ScrollToTopButton />
            </body>
 
     
     </html>
-    
-   
+    </ClerkProvider>
+    </NextIntlClientProvider>
   );
 }

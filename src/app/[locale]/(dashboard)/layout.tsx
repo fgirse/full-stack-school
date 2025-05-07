@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function DashboardLayout({
   children,
 }: Readonly<{
@@ -16,8 +17,8 @@ export default function DashboardLayout({
           href="/"
           className="flex items-center justify-center lg:justify-start gap-2"
         >
-          <Image src="/logo.png" alt="logo" width={32} height={32} />
-          <span className="hidden lg:block font-bold">SchooLama</span>
+          <Image src="/LogoDms.png" alt="logo" width={180} height={60} />
+          <span className="hidden lg:block font-bold"></span>
         </Link>
         <Menu />
       </div>
