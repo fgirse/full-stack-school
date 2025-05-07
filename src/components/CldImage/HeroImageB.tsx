@@ -31,7 +31,7 @@ const cld = new Cloudinary({
 const t = useTranslations('Hero');
 
 // Use the image with public ID, 'sample'.
-const myImage = cld.image('https://res.cloudinary.com/carlo2024/image/upload/t_Banner 9:16/v1746344631/Strategic-Planning-for-Mid-Sized-Healthcare-Organizations-Turning-Vision-into-Daily-Impact-1400x788_zq6ftu.png');
+const myImage = cld.image('/Strategic-Planning-for-Mid-Sized-Healthcare-Organizations-Turning-Vision-into-Daily-Impact-1400x788_zq6ftu');
 
 
 // Transform the image.
