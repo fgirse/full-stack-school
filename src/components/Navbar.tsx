@@ -28,8 +28,21 @@ const Navbar = async () => {
         </div>
         <div className="flex flex-col">
           <span className="text-xs leading-3 font-medium">John Doe</span>
-          <span className="text-[10px] text-gray-500 text-right">
-            {user?.publicMetadata?.role as string}
+          {(() => {
+            const backgroundColor =
+              user?.publicMetadata?.role === "admin"
+                ? "bg-lamaPurple text-white"
+                : user?.publicMetadata?.role === "teacher"
+                ? "bg-lamaYellow"
+                : user?.publicMetadata?.role === "student"
+                ? "bg-lamaGreen"
+                : "bg-gray-300";
+            return <div className={`w-4 h-4 rounded-full ${backgroundColor}`} />;
+          })()}
+          
+        
+          <span className="px-2 py-1 rounded-xl text-[10px] text-gray-50 text-center bg-red-400">
+            {user?.publicMetadata?.role === "admin" ? "admin" : "text-white bg-greeen"}
           </span>
         </div>
         {/* <Image src="/avatar.png" alt="" width={36} height={36} className="rounded-full"/> */}
