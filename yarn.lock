@@ -3658,10 +3658,10 @@ __metadata:
     next-intl: "npm:^4.1.0"
     postcss: "npm:^8"
     prisma: "npm:^5.19.1"
-    react: "npm:^18"
-    react-big-calendar: "npm:^1.18.0"
+    react: "npm:^18.0.0"
+    react-big-calendar: "npm:^1.5.0"
     react-calendar: "npm:^5.0.0"
-    react-dom: "npm:^18"
+    react-dom: "npm:^18.0.0"
     react-hook-form: "npm:^7.52.2"
     react-icons: "npm:^5.5.0"
     react-toastify: "npm:^10.0.5"
@@ -4705,7 +4705,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-big-calendar@npm:^1.18.0":
+"react-big-calendar@npm:^1.5.0":
   version: 1.18.0
   resolution: "react-big-calendar@npm:1.18.0"
   dependencies:
@@ -4751,7 +4751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18":
+"react-dom@npm:^18.0.0":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -4855,7 +4855,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18":
+"react@npm:^18.0.0":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
