@@ -1076,14 +1076,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-big-calendar@npm:^1.8.9":
-  version: 1.8.9
-  resolution: "@types/react-big-calendar@npm:1.8.9"
+"@types/react-big-calendar@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "@types/react-big-calendar@npm:1.16.1"
   dependencies:
     "@types/date-arithmetic": "npm:*"
     "@types/prop-types": "npm:*"
     "@types/react": "npm:*"
-  checksum: 10c0/38fc1c3889ceffb2caf216f357966514e373e4faeb030315b8a712c73c0cd6056b51edd6b777c18059a41398b350b2b8f1f6c6d8d791bc3d95b676301cb00967
+  checksum: 10c0/fb47fb688b3919390af8cb0a6e926db3e1bca5aa9de79c82b28703b98463219494cac50b524232765173311923bdcb0b6ce87977036ae7e7912b0f0c67e74837
   languageName: node
   linkType: hard
 
@@ -3644,7 +3644,7 @@ __metadata:
     "@types/bcrypt": "npm:^5"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
-    "@types/react-big-calendar": "npm:^1.8.9"
+    "@types/react-big-calendar": "npm:^1.16.1"
     "@types/react-dom": "npm:^18"
     bcrypt: "npm:^5.1.1"
     eslint: "npm:^8"
@@ -3659,7 +3659,7 @@ __metadata:
     postcss: "npm:^8"
     prisma: "npm:^5.19.1"
     react: "npm:^18"
-    react-big-calendar: "npm:^1.13.2"
+    react-big-calendar: "npm:^1.18.0"
     react-calendar: "npm:^5.0.0"
     react-dom: "npm:^18"
     react-hook-form: "npm:^7.52.2"
@@ -4705,9 +4705,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-big-calendar@npm:^1.13.2":
-  version: 1.13.2
-  resolution: "react-big-calendar@npm:1.13.2"
+"react-big-calendar@npm:^1.18.0":
+  version: 1.18.0
+  resolution: "react-big-calendar@npm:1.18.0"
   dependencies:
     "@babel/runtime": "npm:^7.20.7"
     clsx: "npm:^1.2.1"
@@ -4726,9 +4726,9 @@ __metadata:
     react-overlays: "npm:^5.2.1"
     uncontrollable: "npm:^7.2.1"
   peerDependencies:
-    react: ^16.14.0 || ^17 || ^18
-    react-dom: ^16.14.0 || ^17 || ^18
-  checksum: 10c0/5e3db13173ec193fa7b0ec3d50153b0d3acc977587d36b29e112941b343fdb336822f7e8a6a95e9120d436ad07bf6f6779e993ded0adcb277fac8590ec0d655b
+    react: ^16.14.0 || ^17 || ^18 || ^19
+    react-dom: ^16.14.0 || ^17 || ^18 || ^19
+  checksum: 10c0/4cdbfb42d6561c13c60b01f506d19b1c5d149b2c3ea5e43da1044ec9cdefb1b44e577b9f740081df601f9024819167d1060dc87217bd820d29a9238facc137cc
   languageName: node
   linkType: hard
 
