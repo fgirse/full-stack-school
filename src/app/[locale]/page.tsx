@@ -14,18 +14,18 @@ export default function Home() {
     <main>
       <section className="min-h-screen flex flex-col items-center justify-center ">
  
-        <div className="hidden"> 
+        <div className="hidden md:block"> 
             <HeroImageA/>
         </div>
-        <div className=" w-full h-full md:hidden ">
+        <div className=" w-[100vw] h-[100vh] md:hidden ">
       <HeroImageB/> 
         </div>                                                
-         <div className=" mt-[vh] flex flex-col items-center bg-gradient-to-b from-[#938d7d] lg:bg-gradient-to-b via-transparent  to-transparent lg:mt-[50vh]">
+         <div className="flex flex-col items-center bg-gradient-to-b from-[#938d7d] lg:bg-gradient-to-b via-transparent  to-transparent lg:mt-[50vh]">
          
          </div> 
          
         </section>
-        <div className=" mt-[8vw] w-full max-w-[100vw] mx-auto flex flex-col lg:mt-24vh]">
+        <div className=" mt-[-8vw] w-full max-w-[100vw] mx-auto flex flex-col lg:mt-24vh]">
         <HeroImage02/> 
          </div>
 

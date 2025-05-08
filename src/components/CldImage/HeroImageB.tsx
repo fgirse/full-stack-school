@@ -31,21 +31,21 @@ const cld = new Cloudinary({
 const t = useTranslations('Hero');
 
 // Use the image with public ID, 'sample'.
-const myImage = cld.image('/Strategic-Planning-for-Mid-Sized-Healthcare-Organizations-Turning-Vision-into-Daily-Impact-1400x788_zq6ftu');
+const myImage = cld.image('/Strategic-Planning-for-Mid-Sized-Healthcare-Organizations-Turning-Vision-into-Daily-Impact-1400x788_zq6ftu_Banner_916_2_fjfvew');
 
 
 // Transform the image.
 myImage
-  .resize(fill(400, 900))
+  .resize(fill(1800,3500))
   .roundCorners(byRadius(0))
 
   .overlay(   
     source(
-      text(t("präTitle"), new TextStyle('bowlby one sc',54))
+      text(t("präTitle"), new TextStyle('bowlby one sc',60))
       .textColor('orange')       
     )
     
-    .position(new Position().gravity(compass('north_west')).offsetY(510).offsetX(110)))
+    .position(new Position().gravity(compass('center')).offsetY(680).offsetX(0)))
 
   
   .overlay(   
@@ -54,14 +54,14 @@ myImage
       .textColor('white')       
     )
     
-    .position(new Position().gravity(compass('north_west')).offsetY(588).offsetX(110)))
+    .position(new Position().gravity(compass('center')).offsetY(780).offsetX(0)))
 
     .overlay(   
       source(
-        text(t("postTitle"), new TextStyle('raleway', 36) .textAlignment('justify') .fontWeight('black')) // Apply 'bold' using .fontWeight()
+        text(t("postTitle"), new TextStyle('raleway', 56) .textAlignment('justify') .fontWeight('black')) // Apply 'bold' using .fontWeight()
           .textColor('white')      
       )
-      .position(new Position().gravity(compass('north_west')).offsetY(690).offsetX(119)))
+      .position(new Position().gravity(compass('center')).offsetY(870).offsetX(0)))
   
 
     
@@ -76,7 +76,7 @@ myImage
     
     <div className="flex flex-col items-center">
     
-      <Image src={myUrl} width={480} height={900} alt="Transformed Image" className="text-white text-left" />
+      <Image src={myUrl} width={480} height={1200} alt="Transformed Image" className="text-white text-left" />
     </div>
     
     
