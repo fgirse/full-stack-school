@@ -36,7 +36,7 @@ const myImage = cld.image('/Strategic-Planning-for-Mid-Sized-Healthcare-Organiza
 
 // Transform the image.
 myImage
-  .resize(fill(1900, 900))
+  .resize(fill(400, 900))
   .roundCorners(byRadius(0))
 
   .overlay(   
@@ -76,7 +76,7 @@ myImage
     
     <div className="flex flex-col items-center">
     
-      <Image src={myUrl} width={1980} height={900} alt="Transformed Image" className="text-white text-left" />
+      <Image src={myUrl} width={480} height={900} alt="Transformed Image" className="text-white text-left" />
     </div>
     
     
