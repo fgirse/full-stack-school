@@ -18,7 +18,7 @@ const getRoleClass = (role: string) => {
 };
 
 const Navbar = async () => {
-  const user = await currentUser();
+  const user = currentUser();
   return (
     <div className="flex items-center justify-between p-4">
       {/* SEARCH BAR */}
@@ -43,11 +43,12 @@ const Navbar = async () => {
         </div>
         <div className="flex flex-col">
           <span className="text-sm font-semibold text-gray-600">
-            {user?.firstName} {user?.lastName}  </span>
+            {user?.firstName} {user?.lastName}{" "}
+          </span>
           {typeof user?.publicMetadata?.role === "string" && (
             <span
               className={`px-2 py-1 rounded-xl text-[10px] text-white text-center ${getRoleClass(
-                user.publicMetadata.role as string
+                user.publicMetadata.role as string,
               )}`}
             >
               {user.publicMetadata.role}

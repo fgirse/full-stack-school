@@ -10,7 +10,7 @@
 /coverage
 
 # public
-/
+/public
 
 # next.js
 /.next/
