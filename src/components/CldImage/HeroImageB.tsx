@@ -1,4 +1,102 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import Image from "next/image";
+
+
+
+
+
 import { Cloudinary } from "@cloudinary/url-gen";
 
 // Import required actions.
@@ -24,67 +122,68 @@ export default function HeroImage() {
     cloud: {
       cloudName: "Carlo2024",
     },
-  });7
+  });
 
-  const t = useTranslations("Hero");
+  const t = useTranslations("HeroMobile");
 
   // Use the image with public ID, 'sample'.
   const myImage = cld.image(
-    "/Strategic-Planning-for-Mid-Sized-Healthcare-Organizations-Turning-Vision-into-Daily-Impact-1400x788_zq6ftu_Banner_916_2_fjfvew",
+"/Strategic-Planning-for-Mid-Sized-Healthcare-Organizations-Turning-Vision-into-Daily-Impact-1400x788_zq6ftu_Banner_916_2_fjfvew",
   );
 
   // Transform the image.
   myImage
-    .resize(fill(3040,4900))
+  .resize(fill(1800,3600))
     .roundCorners(byRadius(0))
 
     .overlay(
       source(
-        text(t("präTitle"), new TextStyle("bowlby one sc", 96)).textColor(
-          "orange",
+        text((t("präTitle")), new TextStyle("bowlby one sc",170)).textColor(
+          "#E3A40A",
         ),
       ).position(
-        new Position().gravity(compass("west")).offsetY(90).offsetX(110),
+        new Position().gravity(compass("north_west")).offsetY(90).offsetX(110),
       ),
     )
 
-    .overlay(
-      source(
-        text("digitale", new TextStyle("bowlby one sc", 320)).textColor(
-          "white",
-        ),
-      ).position(
-        new Position().gravity(compass("west")).offsetY(268).offsetX(110),
-      ),
-    )
 
     .overlay(
       source(
-        text("online", new TextStyle("bowlby one sc", 320)).textColor("white"),
-      ).position(
-        new Position().gravity(compass("west")).offsetY(520).offsetX(110),
-      ),
-    )
+        text(
+          (t("Title")),
+          new TextStyle("bowlby one sc", 180)
+            .fontWeight("bold")
+            .lineSpacing(-96)
+            .textAlignment("justify")
+              
+            
+            
 
-    .overlay(
-      source(
-        text("school", new TextStyle("bowlby one sc", 320)).textColor("white"),
+        ) .textColor(
+          "#FFFFFF",
+        )
       ).position(
-        new Position().gravity(compass("west")).offsetY(770).offsetX(110),
+        new Position().gravity(compass("west")).offsetY(1190).offsetX(110),
       ),
     )
 
     .overlay(
       source(
         text(
-          t("postTitle"),
-          new TextStyle("raleway", 36)
+          (t("postTitle")),
+          new TextStyle("bowlby one sc", 36)
+            .fontWeight("bold")
+            .lineSpacing(-96)
             .textAlignment("justify")
-            .fontWeight("black"),
-        ) // Apply 'bold' using .fontWeight()
-          .textColor("white"),
+              
+            
+            
+
+        ) .textColor(
+          "#FFFFFF",
+        )
       ).position(
-        new Position().gravity(compass("north_west")).offsetY(690).offsetX(119),
+        new Position().gravity(compass("west")).offsetY(2590).offsetX(110),
       ),
     )
 
