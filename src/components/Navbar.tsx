@@ -18,7 +18,7 @@ const getRoleClass = (role: string) => {
 };
 
 const Navbar = async () => {
-  const user = currentUser();
+  const user = await currentUser();
   return (
     <div className="flex items-center justify-between p-4">
       {/* SEARCH BAR */}
